@@ -1,0 +1,14 @@
+fn is_palindrome(s: &str) -> bool {
+    let s = s.to_lowercase(); // Convert string to lowercase to ignore case
+    let reversed = s.chars().rev().collect::<String>(); // Reverse the string
+    s == reversed // Check if the original string is equal to its reverse
+}
+
+fn main() {
+    let test_string = "Racecar";
+    if is_palindrome(test_string) {
+        println!("{} is a palindrome", test_string);
+    } else {
+        println!("{} is not a palindrome", test_string);
+    }
+}
